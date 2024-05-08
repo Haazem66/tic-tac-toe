@@ -29,7 +29,7 @@ function GameBoard({ onSelectSqaure, turns }) {
           <ol>
             {row.map((col, colIndex) => (
               <li key={colIndex}>
-                <button onClick={() => onSelectSqaure(rowIndex, colIndex)}>
+                <button onClick={() => onSelectSqaure(rowIndex, colIndex)} disabled={col ? true : false}>
                   {col}
                 </button>
               </li>

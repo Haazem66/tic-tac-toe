@@ -1,6 +1,11 @@
-function Log () {
+function Log ({turns}) {
+
     return (
-        <h1></h1>
+        <ol id="log">
+            {turns.map((turn) => {
+                return <li key={`${turn.square.row}${turn.square.col}`}>{turn.player} selected {turn.square.row}, {turn.square.col}</li>
+            })}
+        </ol>
     );
 };
 
